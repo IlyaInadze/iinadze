@@ -1,6 +1,6 @@
 package ru.job4j;
 /**
-* Class Класс Calculate
+* Class КЉласс Calculate
 *
 * @author Ilya Inadze (inadze@mail.ru)
 * @version $Id$

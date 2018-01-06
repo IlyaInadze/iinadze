@@ -1,7 +1,7 @@
 /**
 * Package for calculate task.
 *
-* @author Ilya Inadze (pinadze@mail.ru)
+* @author Ilya Inadze (inadze@mail.ru)
 * @version $Id$
 * @since 0.1
 */
