@@ -10,22 +10,19 @@ public class ConverterTest {
         Converter converter = new Converter();
         int result = converter.rubleToDollar(60);
         assertThat(result, is(1));
-    }
-	
+    }	
     @Test
     public void when70RubleToEuroThen1() {
         Converter converter = new Converter();
         int result = converter.rubleToEuro(70);
         assertThat(result, is(1));
-    }
-	
+    }	
 	@Test
 	public void when1EuroToRubleThen70() {
         Converter converter = new Converter();
         int result = converter.euroToRuble(1);
         assertThat(result, is(70));
-		}
-		
+		}		
 	@Test
     public void when1DollarToRubleThen60() {
         Converter converter = new Converter();
