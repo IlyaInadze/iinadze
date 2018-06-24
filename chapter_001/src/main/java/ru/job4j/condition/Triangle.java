@@ -12,24 +12,22 @@ public class Triangle {
     }
 
     public double period(double ab, double ac, double bc) {
+
         return (ab + ac + bc) / 2;
     }
 
     public double area() {
-        double rsl = -1; // мы устанавливаем значение -1, так как может быть что треугольника нет. Это значение говорит о том. что треугольника нет.
         double ab = this.a.distanceTo(this.b);
         double ac = this.a.distanceTo(this.c);
         double bc = this.b.distanceTo(this.c);
         double p = this.period(ab, ac, bc);
-        if (this.exist(ab, ac, bc)) {
-            // вычисляем плошадь треугольника по формуле Герона.
-            rsl = Math.sqrt(p * (p - ab) * (p - ac) * (p - bc));
-        }
-        return rsl;
+        return (this.exist(ab, ac, bc)) ? Math.sqrt(p * (p - ab) * (p - ac) * (p - bc)) : -1;
     }
     private boolean exist(double ab, double ac, double bc) {
         // условие существования треугольника с заданными координатами вершин
         if (ab + bc < ac) {return false;}
+        if (ac + bc < ab) {return false;}
+        if (ab + ac < bc) {return false;}
         return true;
         }
     }
