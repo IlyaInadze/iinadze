@@ -25,10 +25,7 @@ public class Triangle {
     }
     private boolean exist(double ab, double ac, double bc) {
         // условие существования треугольника с заданными координатами вершин
-        if (ab + bc < ac) {return false;}
-        if (ac + bc < ab) {return false;}
-        if (ab + ac < bc) {return false;}
-        return true;
+        return ((ab + bc < ac)&&((ac + bc) < ab)&&((ab + ac) < bc)) ? false : true;
         }
     }
 
