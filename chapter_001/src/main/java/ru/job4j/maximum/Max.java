@@ -5,7 +5,8 @@ public class Max {
         return this.max(this.max(first, second), third);
     }
     public int max(int first, int second){
-     return (first > second) ? first : second;
+
+        return (first > second) ? first : second;
     }
 }
 
