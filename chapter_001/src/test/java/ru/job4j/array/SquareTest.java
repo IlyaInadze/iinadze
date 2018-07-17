@@ -13,4 +13,20 @@ public class SquareTest {
         int[] expect = new int[] {1, 4, 9};
         assertThat(rst, is(expect));
     }
+    @Test
+    public void whenBound4Then14916() {
+        int bound = 4;
+        Square square = new Square();
+        int[] rst = square.calculate(bound);
+        int[] expect = new int[] {1, 4, 9, 16};
+        assertThat(rst, is(expect));
+    }
+    @Test
+    public void whenBound2Then149162536496481100() {
+        int bound = 10;
+        Square square = new Square();
+        int[] rst = square.calculate(bound);
+        int[] expect = new int[] {1, 4, 9, 16, 25, 36, 49, 64, 81, 100};
+        assertThat(rst, is(expect));
+    }
 }
