@@ -13,10 +13,10 @@ public class ArrayChar {
         boolean result = true;
         char[] value = prefix.toCharArray();
         for (int index = 0; index != value.length; index++) {
-            if (value.equals(data)) {
+            if (value[index] == data[index]) {
                 continue;
             }
-            else if (!value.equals(data)) {
+            else if (value[index] != data[index]) {
                 result = false;
                 break;
             }
