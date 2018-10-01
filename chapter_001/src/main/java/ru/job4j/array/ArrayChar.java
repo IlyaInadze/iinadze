@@ -16,7 +16,7 @@ public class ArrayChar {
             if (value.equals(data)) {
                 continue;
             }
-            if (!value.equals(data)) {
+            else if (!value.equals(data)) {
                 result = false;
                 break;
             }
