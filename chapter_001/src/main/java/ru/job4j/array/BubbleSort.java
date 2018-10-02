@@ -7,13 +7,15 @@ public class BubbleSort {
         int value;
         while (!arrayissorted) {
             arrayissorted = true;
-            for (int i = 0; i < array.length - 1; i++) {
+            int sortInd = 1;
+            for (int i = 0; i < array.length - sortInd; i++) {
                 if (array[i] > array[i + 1]) {
                     arrayissorted = false;
 
                     value = array[i];
                     array[i] = array[i + 1];
                     array[i + 1] = value;
+                    sortInd++;
                 }
             }
         }
