@@ -5,6 +5,7 @@ package ru.job4j.array;
         import static org.junit.Assert.assertThat;
 
 public class MatrixTest {
+    @Test
     public void when5on5() {
         Matrix matrix = new Matrix();
         int[][] table = matrix.multiple(5);
