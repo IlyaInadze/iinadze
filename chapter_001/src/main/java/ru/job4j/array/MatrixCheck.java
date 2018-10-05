@@ -11,6 +11,7 @@ public class MatrixCheck {
                 }
                 result = false;
             }
+
             //внутренний цикл для второй диагонали.
             for (int j = data.length - 1; j >= 0; j = j - 1){
                 if (data[i][j] != data[i+1][j-1]){
