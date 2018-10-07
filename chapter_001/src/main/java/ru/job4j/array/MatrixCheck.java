@@ -4,21 +4,17 @@ public class MatrixCheck {
     public boolean mono(boolean[][] data) {
         boolean result = true;
         for (int i = 0; i != data.length; i++) {
-            //внутренний цикл для первой диагонали.
-            for (int j = 0; j != data.length; j++){
-                if (data[i][j] != data[i+1][j+1]){
+            for (int j = 0; j != data.length; j++) {
+                if (data[0][0] != data[i][j]) {
                     break;
                 }
                 result = false;
             }
+                if (data[0][data.length - 1] != data[i][data.length - 1 - 1]) {
+                    break;
+                }
+                result = false;
 
-            //внутренний цикл для второй диагонали.
-            for (int j = data.length - 1; j >= 0; j = j - 1){
-                if (data[i][j] != data[i+1][j-1]){
-                    break;
-                }
-                result = false;
-            }
         }
         return result;
     }
