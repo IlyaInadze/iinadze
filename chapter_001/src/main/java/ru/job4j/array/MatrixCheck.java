@@ -6,16 +6,15 @@ public class MatrixCheck {
         for (int i = 0; i != data.length; i++) {
             for (int j = 0; j != data.length; j++) {
                 if (data[0][0] != data[i][j]) {
+                    result = false;
                     break;
                 }
-                result = false;
             }
-                if (data[0][data.length - 1] != data[i][data.length - 1 - 1]) {
+                if (data[0][data.length - 1] != data[i][data.length - 1 - i]) {
+                    result = false;
                     break;
                 }
-                result = false;
-
+            }
+            return result;
         }
-        return result;
     }
-}
