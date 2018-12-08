@@ -69,11 +69,12 @@ public class Logic {
     public boolean isWin() {
         int[][] table = this.convert();
         boolean rst = false;
-        for (int i = 0; i != table.length - 1; i++) {
-            for (int j = 0; j != table.length - 1; j++) {
-                if (table[i][j] == 1 && table[i][j] == table[i][j + 1]) {
-                    rst = true;
-                    if (table[i][j] == 1 && table[i][j] == table[i + 1][j]) {
+        int summ = 0;
+        for (int i = 0; i != table.length; i++) {
+            for (int j = 0; j != table.length; j++) {
+                if (table[i][j] == 1 || table[j][i] == 1) {
+                    summ += 1;
+                    if (summ == table.length) {
                         rst = true;
                     }
                 }
@@ -81,6 +82,7 @@ public class Logic {
         }
         return rst;
     }
+
 
     private int[][] convert() {
         int[][] table = new int[this.size][this.size];
