@@ -69,9 +69,9 @@ public class Logic {
     public boolean isWin() {
         int[][] table = this.convert();
         boolean rst = false;
-        int summ1 = 0;
-        int summ2 = 0;
         for (int i = 0; i != table.length; i++) {
+            int summ1 = 0;
+            int summ2 = 0;
             for (int j = 0; j != table.length; j++) {
                 if (table[i][j] == 1 ) {
                     summ1 += 1;
