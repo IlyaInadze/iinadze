@@ -1,7 +1,5 @@
 package ru.job4j.array;
-
 import java.util.Arrays;
-
 public class ArrayDuplicate {
     public String[] removeDuplicates(String[] array) {
         int unique = array.length;
