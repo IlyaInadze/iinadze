@@ -19,7 +19,6 @@ public class Triangle {
         return (this.exist(ab, ac, bc)) ? Math.sqrt(p * (p - ab) * (p - ac) * (p - bc)) : -1;
     }
     private boolean exist(double ab, double ac, double bc) {
-        // условие существования треугольника с заданными координатами вершин
         return ((ab + bc) < ac) || ((ac + bc) < ab) || ((ab + ac) < bc) ? false : true;
         }
     }
